@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BanglaTools — বাংলায় ফ্রি অনলাইন টুলস | যাকাত, জমি, বিদ্যুৎ বিল, GPA ক্যালকুলেটর</title>
+<meta name="description" content="সম্পূর্ণ বাংলায় ১৫টি ফ্রি অনলাইন টুল — যাকাত ক্যালকুলেটর, জমি পরিমাপ, বিদ্যুৎ বিল হিসাব, GPA ক্যালকুলেটর, নামাজের সময়সূচী, EMI, BMI, মুদ্রা কনভার্টারসহ আরও অনেক কিছু। কোনো সাইন-আপ ছাড়াই ব্যবহার করুন।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"নিসাব কী?","acceptedAnswer":{"@type":"Answer","text":"নিসাব হলো সেই সর্বনিম্ন সম্পদের পরিমাণ যার উপর যাকাত ফরজ হয় — ৭.৫ ভরি স্বর্ণ বা ৫২.৫ ভরি রূপার সমমূল্য, যেটি কম সেটি ধরা হয়।"}},
+{"@type":"Question","name":"স্বর্ণের দাম কোথা থেকে নেব?","acceptedAnswer":{"@type":"Answer","text":"বাংলাদেশ জুয়েলার্স সমিতি (বাজুস) প্রতিদিন দাম ঘোষণা করে — সেই দিনের দাম এখানে বসিয়ে নিন, ফলাফল আরও নির্ভুল হবে।"}},
+{"@type":"Question","name":"ঋণ থাকলে কি বাদ যাবে?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ — মোট সম্পদ থেকে আপনার ঋণ বা দেনা বাদ দিয়েই যাকাতযোগ্য সম্পদ ধরা হয়।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"১ বিঘা কি সব জায়গায় সমান?","acceptedAnswer":{"@type":"Answer","text":"না — ঢাকায় ১ বিঘা ≈ ৩৩ শতাংশ, রাজশাহীতে ≈ ২০ শতাংশ। দলিলে সবসময় শতাংশে মিলিয়ে নিন।"}},
+{"@type":"Question","name":"শতাংশ আর ডেসিমাল কি এক?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ, একই — ১ শতাংশ = ১ ডেসিমাল = ৪৩৫.৬ বর্গফুট।"}},
+{"@type":"Question","name":"গন্ডা-ছটাক কোথায় ব্যবহার হয়?","acceptedAnswer":{"@type":"Answer","text":"চট্টগ্রামসহ কিছু অঞ্চলে গন্ডা (৮৬৪ বর্গফুট) ও ছটাক (৪৫ বর্গফুট) প্রচলিত — ১৬ ছটাক = ১ কাঠা।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"৫০ ইউনিটের নিচে ব্যবহার করলে বিল কম কেন?","acceptedAnswer":{"@type":"Answer","text":"৫০ ইউনিট পর্যন্ত লাইফলাইন রেট (৳৪.৬৩) প্রযোজ্য — নিম্ন আয়ের পরিবারের জন্য ভর্তুকি। ৫১ ইউনিট হলেই পুরো হিসাব স্ল্যাব রেটে চলে যায়।"}},
+{"@type":"Question","name":"ডিমান্ড চার্জ কী?","acceptedAnswer":{"@type":"Answer","text":"আপনার অনুমোদিত লোড (kW) অনুযায়ী মাসিক ফিক্সড চার্জ — ৳৪২/kW। বিলের কাগজে আপনার লোড লেখা থাকে।"}},
+{"@type":"Question","name":"স্ল্যাব রেট বদলালে কী করব?","acceptedAnswer":{"@type":"Answer","text":"BERC মাঝে মাঝে রেট বদলায় — টুলের ভেতরে সব রেট পরিবর্তনযোগ্য, নতুন রেট বসিয়ে নিলেই হবে।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"৪র্থ বিষয়ের নম্বর কীভাবে ধরা হয়?","acceptedAnswer":{"@type":"Answer","text":"৪র্থ বিষয়ে গ্রেড পয়েন্ট ২.০০-এর বেশি হলে শুধু অতিরিক্ত অংশ যোগ হয় — কম পেলে GPA কমে না।"}},
+{"@type":"Question","name":"এক বিষয়ে ফেল করলে কী হবে?","acceptedAnswer":{"@type":"Answer","text":"যেকোনো আবশ্যিক বিষয়ে ৩৩-এর নিচে পেলে সামগ্রিক ফলাফল ফেল — বাকি সব বিষয়ে A+ পেলেও।"}},
+{"@type":"Question","name":"৮০ নম্বর পেলে গ্রেড পয়েন্ট কত?","acceptedAnswer":{"@type":"Answer","text":"৮০ বা তার বেশি = A+ = ৫.০০। ৭০–৭৯ = A (৪.০০), ৬০–৬৯ = A- (৩.৫০)।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"মোট দিনের হিসাব কেন দরকার?","acceptedAnswer":{"@type":"Answer","text":"অনেক ফরমে (যেমন সরকারি চাকরি) বয়স দিনে হিসাব চাওয়া হয় — সেটাও এই টুলে পাবেন।"}},
+{"@type":"Question","name":"ভবিষ্যতের তারিখ দিলে কী হবে?","acceptedAnswer":{"@type":"Answer","text":"জন্মতারিখ আজকের তারিখের পরে হতে পারে না — এমন হলে টুলটি সতর্ক করবে।"}},
+{"@type":"Question","name":"২৯ ফেব্রুয়ারিতে জন্ম হলে?","acceptedAnswer":{"@type":"Answer","text":"অধিবর্ষ (লিপ ইয়ার) ঠিকমতো ধরা হয় — ক্যালেন্ডারের নিয়মেই বয়স হিসাব হবে।"}}]}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="bar">
+    <button class="back-btn" id="backBtn" data-i18n="back" onclick="goHome()">← সব টুল</button>
+    <div class="logo-mark">🧮</div>
+    <div class="brand">
+      <h1 class="site-title"><a href="#/">BanglaTools</a></h1>
+      <div class="site-tag" data-i18n="tag">সব হিসাব, এক ঠিকানায়</div>
+    </div>
+    <nav class="head-cats" aria-label="Categories">
+      <a href="#/" data-cat-link="money" data-i18n="cat.money">টাকার হিসাব</a>
+      <a href="#/" data-cat-link="edu" data-i18n="cat.edu">পড়াশোনা ও স্বাস্থ্য</a>
+      <a href="#/" data-cat-link="deen" data-i18n="cat.deen">জমি, তারিখ ও ইবাদত</a>
+    </nav>
+    <a href="#/blog" class="nav-link" data-i18n="nav.blog">ব্লগ</a>
+    <div class="lang-switch" role="group" aria-label="Language / ভাষা">
+      <button id="langBn" class="lang-btn active" onclick="setLang('bn')">বাংলা</button>
+      <button id="langEn" class="lang-btn" onclick="setLang('en')">English</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="মেনু / Menu" aria-expanded="false" onclick="toggleDrawer()">☰</button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer(false)"></div>
+<aside class="drawer" id="drawer" aria-label="সাইট মেনু / Site menu">
+  <div class="drawer-head">
+    <span class="drawer-title">BanglaTools</span>
+    <button class="drawer-close" onclick="toggleDrawer(false)" aria-label="বন্ধ / Close">✕</button>
+  </div>
+  <div class="drawer-sec" data-i18n="drawer.cats">ক্যাটাগরি</div>
+  <div class="drawer-cat" data-drawer-cat="money">
+    <div class="drawer-cat-row">
+      <a href="#/" data-cat-link="money" onclick="toggleDrawer(false)" class="drawer-cat-name"><span class="drawer-cat-ico">💰</span><span data-i18n="cat.money">টাকার হিসাব</span></a>
+      <button class="drawer-cat-arrow" onclick="toggleDrawerCat('money', event)" aria-expanded="false" aria-label="টুল তালিকা খুলুন / Toggle tools">›</button>
+    </div>
+    <div class="drawer-tools" id="drawerTools-money"></div>
+  </div>
+  <div class="drawer-cat" data-drawer-cat="edu">
+    <div class="drawer-cat-row">
+      <a href="#/" data-cat-link="edu" onclick="toggleDrawer(false)" class="drawer-cat-name"><span class="drawer-cat-ico">🎓</span><span data-i18n="cat.edu">পড়াশোনা ও স্বাস্থ্য</span></a>
+      <button class="drawer-cat-arrow" onclick="toggleDrawerCat('edu', event)" aria-expanded="false" aria-label="টুল তালিকা খুলুন / Toggle tools">›</button>
+    </div>
+    <div class="drawer-tools" id="drawerTools-edu"></div>
+  </div>
+  <div class="drawer-cat" data-drawer-cat="deen">
+    <div class="drawer-cat-row">
+      <a href="#/" data-cat-link="deen" onclick="toggleDrawer(false)" class="drawer-cat-name"><span class="drawer-cat-ico">🕌</span><span data-i18n="cat.deen">জমি, তারিখ ও ইবাদত</span></a>
+      <button class="drawer-cat-arrow" onclick="toggleDrawerCat('deen', event)" aria-expanded="false" aria-label="টুল তালিকা খুলুন / Toggle tools">›</button>
+    </div>
+    <div class="drawer-tools" id="drawerTools-deen"></div>
+  </div>
+  <div class="drawer-sec" data-i18n="drawer.pages">পেজসমূহ</div>
+  <a href="#/" onclick="toggleDrawer(false)"><span data-i18n="drawer.home">হোম</span></a>
+  <a href="#/blog" onclick="toggleDrawer(false)"><span data-i18n="nav.blog">ব্লগ</span></a>
+  <a href="#/about" onclick="toggleDrawer(false)"><span data-i18n="drawer.about">আমাদের সম্পর্কে</span></a>
+  <a href="#/privacy" onclick="toggleDrawer(false)"><span data-i18n="drawer.privacy">প্রাইভেসি পলিসি</span></a>
+  <a href="#/contact" onclick="toggleDrawer(false)"><span data-i18n="drawer.contact">যোগাযোগ</span></a>
+  <div class="drawer-sec" data-i18n="drawer.lang">ভাষা / Language</div>
+  <div class="drawer-langs">
+    <button class="dlang-btn" data-dlang="bn" onclick="setLang('bn');toggleDrawer(false)">বাংলা</button>
+    <button class="dlang-btn" data-dlang="en" onclick="setLang('en');toggleDrawer(false)">English</button>
+  </div>
+</aside>
+
+<!-- ============================================================
+     ADSENSE SLOT: HEADER
+     আপনার Google AdSense কোড নিচের div-এর ভেতরে পেস্ট করুন।
+     Paste your Google AdSense code inside the div below.
+     ============================================================ -->
+<div class="ad-slot" data-ad-slot="header"><span data-i18n="ad">বিজ্ঞাপন</span></div>
+
+<main class="container">
+
+  <!-- ==================== HOME ==================== -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title" id="heroTitle" data-i18n="hero.headline">সব হিসাব, এক ঠিকানায়</h1>
+        <p data-i18n="hero.sub">হিসাব-নিকাশ এখন মাতৃভাষায় — কোনো সাইন-আপ বা টাকা ছাড়াই।</p>
+        <div class="hero-search">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="toolSearch" data-i18n-ph="hero.searchPh" placeholder="টুল খুঁজুন… (যেমন: যাকাত, জমি, GPA)" autocomplete="off" aria-label="টুল খুঁজুন / Search tools">
+        </div>
+        <div class="pill-row">
+          <span class="pill" data-i18n="hero.p1">✓ ১০০% ফ্রি</span>
+          <span class="pill" data-i18n="hero.p2">✓ সাইন-আপ লাগে না</span>
+          <span class="pill" data-i18n="hero.p3">✓ মোবাইল ফ্রেন্ডলি</span>
+        </div>
+      </div>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <button class="cat-card cat-money" data-cat-card="money" onclick="setCategory('money')" aria-pressed="false">
+        <span class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <ellipse cx="32" cy="56" rx="20" ry="4" class="sh"/>
+            <circle cx="27" cy="31" r="19" class="c1"/>
+            <circle cx="27" cy="31" r="19" fill="none" class="c1s" stroke-width="2.5"/>
+            <circle cx="27" cy="31" r="13" fill="none" class="c1s" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <text x="27" y="39" text-anchor="middle" font-size="19" font-weight="700" class="ct" font-family="inherit">৳</text>
+            <circle cx="47" cy="15" r="8.5" class="c2"/>
+            <circle cx="47" cy="15" r="8.5" fill="none" class="c1s" stroke-width="2"/>
+          </svg>
+        </span>
+        <span class="cat-name" data-i18n="cat.money">টাকার হিসাব</span>
+        <span class="cat-desc" data-i18n="cat.moneyDesc">যাকাত, বিল, ট্যাক্সসহ ৯টি টুল</span>
+      </button>
+      <button class="cat-card cat-edu" data-cat-card="edu" onclick="setCategory('edu')" aria-pressed="false">
+        <span class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <ellipse cx="32" cy="56" rx="20" ry="4" class="sh"/>
+            <path d="M32 13 C26 9 18 9 12 11 L12 47 C18 45 26 45 32 49 C38 45 46 45 52 47 L52 11 C46 9 38 9 32 13 Z" class="c1"/>
+            <path d="M32 13 L32 49" fill="none" class="c1s" stroke-width="2.5"/>
+            <path d="M17 20 C21 19 25 19 29 21 M17 27 C21 26 25 26 29 28 M17 34 C21 33 25 33 29 35" fill="none" class="pg" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M35 21 C39 19 43 19 47 20 M35 28 C39 26 43 26 47 27" fill="none" class="pg" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="cat-name" data-i18n="cat.edu">পড়াশোনা ও স্বাস্থ্য</span>
+        <span class="cat-desc" data-i18n="cat.eduDesc">GPA, বয়স, BMI — ৩টি টুল</span>
+      </button>
+      <button class="cat-card cat-deen" data-cat-card="deen" onclick="setCategory('deen')" aria-pressed="false">
+        <span class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 64 64">
+            <ellipse cx="32" cy="56" rx="22" ry="4" class="sh"/>
+            <rect x="14" y="17" width="4.5" height="23" rx="1" class="c1"/>
+            <circle cx="16.2" cy="13.5" r="3.6" class="c1"/>
+            <rect x="45.5" y="17" width="4.5" height="23" rx="1" class="c1"/>
+            <circle cx="47.8" cy="13.5" r="3.6" class="c1"/>
+            <path d="M32 9 C32 9 20 21 20 30 L20 40 L44 40 L44 30 C44 21 32 9 32 9 Z" class="c1"/>
+            <rect x="30.6" y="3" width="2.8" height="8" rx="1.4" class="c1"/>
+            <circle cx="32" cy="4" r="2.2" class="c2"/>
+            <path d="M27 40 a5 5 0 0 1 10 0 Z" class="pg"/>
+            <path d="M8 46 H20 M44 46 H56" class="c1s" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="cat-name" data-i18n="cat.deen">জমি, তারিখ ও ইবাদত</span>
+        <span class="cat-desc" data-i18n="cat.deenDesc">জমি, তারিখ, নামাজ — ৩টি টুল</span>
+      </button>
+    </div>
+    <nav class="tool-grid" aria-label="টুলসমূহ">
+      <a class="tool-card" data-cat="money" href="#/zakat"><span class="icon">🕌</span><span class="name" data-i18n="tools.zakat">যাকাত ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="deen" href="#/land"><span class="icon">🌾</span><span class="name" data-i18n="tools.land">জমি পরিমাপ ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="money" href="#/electricity"><span class="icon">💡</span><span class="name" data-i18n="tools.electricity">বিদ্যুৎ বিল ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="edu" href="#/gpa"><span class="icon">🎓</span><span class="name" data-i18n="tools.gpa">GPA / CGPA ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="edu" href="#/age"><span class="icon">🎂</span><span class="name" data-i18n="tools.age">বয়স ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="money" href="#/gold"><span class="icon">🪙</span><span class="name" data-i18n="tools.gold">স্বর্ণের দাম ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="money" href="#/freelancer-tax"><span class="icon">💼</span><span class="name" data-i18n="tools.freelancerTax">ফ্রিল্যান্সার ট্যাক্স</span></a>
+      <a class="tool-card" data-cat="deen" href="#/prayer"><span class="icon">🕋</span><span class="name" data-i18n="tools.prayer">নামাজের সময়সূচী</span></a>
+      <a class="tool-card" data-cat="money" href="#/emi"><span class="icon">🏦</span><span class="name" data-i18n="tools.emi">EMI / লোন ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="money" href="#/currency"><span class="icon">💱</span><span class="name" data-i18n="tools.currency">মুদ্রা কনভার্টার</span></a>
+      <a class="tool-card" data-cat="edu" href="#/bmi"><span class="icon">⚖️</span><span class="name" data-i18n="tools.bmi">BMI ক্যালকুলেটর</span></a>
+      <a class="tool-card" data-cat="deen" href="#/date"><span class="icon">📅</span><span class="name" data-i18n="tools.date">তারিখ কনভার্টার</span></a>
+      <a class="tool-card" data-cat="money" href="#/mess"><span class="icon">🍛</span><span class="name" data-i18n="tools.mess">মেস খরচ ভাগাভাগি</span></a>
+      <a class="tool-card" data-cat="money" href="#/qurbani"><span class="icon">🐄</span><span class="name" data-i18n="tools.qurbani">কুরবানির দাম অনুমান</span></a>
+      <a class="tool-card" data-cat="money" href="#/income-tax"><span class="icon">🧾</span><span class="name" data-i18n="tools.incomeTax">ইনকাম ট্যাক্স হিসাব</span></a>
+    </nav>
+    <p class="no-result" id="noResult" hidden data-i18n="hero.noResult">দুঃখিত, এই নামে কোনো টুল পাওয়া যায়নি।</p>
+
+    <section class="faq" aria-label="সচরাচর জিজ্ঞাসা">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="faq.q1">BanglaTools কি সম্পূর্ণ ফ্রি?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="faq.a1">হ্যাঁ, সব ১৫টি টুল সম্পূর্ণ ফ্রি — কোনো সাইন-আপ, সাবস্ক্রিপশন বা লুকানো চার্জ নেই। ভবিষ্যতে সাইট চালু রাখতে বিজ্ঞাপন দেখানো হতে পারে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="faq.q2">আমার তথ্য কি সার্ভারে পাঠানো হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="faq.a2">না। নামাজের সময়সূচী ও মুদ্রার লাইভ রেট ছাড়া সব হিসাব আপনার ফোন/ব্রাউজারেই হয় — কোনো তথ্য আমাদের সার্ভারে যায় না বা সংরক্ষণ করা হয় না।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="faq.q3">হিসাব কতটা নির্ভুল?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="faq.a3">সব ফর্মুলা যাচাই করা, তবে বিদ্যুৎ বিলের স্ল্যাব, ট্যাক্স স্ল্যাব ও বাজারদর বদলাতে পারে — এগুলো টুলের ভেতরেই পরিবর্তনযোগ্য রাখা হয়েছে। আর্থিক বা আইনি সিদ্ধান্তের আগে অফিসিয়াল উৎস মিলিয়ে নিন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="faq.q4">নামাজের সময় ও মুদ্রার রেট কোথা থেকে আসে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="faq.a4">নামাজের সময় Aladhan API থেকে এবং মুদ্রার রেট open.er-api.com থেকে লাইভ আনা হয় (দুটোই ফ্রি, কী লাগে না)। ইন্টারনেট না থাকলে মুদ্রা কনভার্টারে ম্যানুয়াল রেট দেওয়ার অপশন আছে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="faq.q5">ইন্টারনেট ছাড়া কি ব্যবহার করা যাবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="faq.a5">পেজ একবার লোড হলে নামাজের সময়সূচী ও লাইভ মুদ্রার রেট ছাড়া বাকি ১৩টি টুল অফলাইনেও কাজ করে।</p></div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ==================== 1. ZAKAT ==================== -->
+  <section class="view" id="view-zakat">
+    <div class="tool-head">
+      <h1 data-i18n="zakat.h1">যাকাত ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="zakat.desc">আপনার সম্পদের উপর কত যাকাত ফরজ, সহজে হিসাব করুন।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="zakat.intro">রমজান এলেই মাথায় একটাই প্রশ্ন ঘোরে — আমার উপর কত টাকা যাকাত ফরজ হলো? কাগজ-কলম নিয়ে বসে হিসাব মেলানো ঝামেলার। এই ক্যালকুলেটরে আপনার নগদ টাকা, স্বর্ণ-রূপা আর ব্যবসার মালের হিসাব দিলেই মুহূর্তে সঠিক যাকাত বেরিয়ে আসবে — নিসাবসহ।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="zakat.step1">আপনার নগদ টাকা, স্বর্ণ (ভরি), রূপা (ভরি), ব্যবসায়িক পণ্য আর পাওনা-দেনার পরিমাণ লিখুন।</li>
+        <li data-i18n="zakat.step2">বাজারদর ঠিক আছে কিনা দেখে নিন — চাইলে বদলে নিতে পারেন।</li>
+        <li data-i18n="zakat.step3">"যাকাত হিসাব করুন" চাপুন — নিসাব পার হলে ২.৫% যাকাত দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="z-cash" data-i18n="zakat.cash">নগদ টাকা (৳)</label>
+      <input type="number" id="z-cash" min="0" value="0">
+      <label class="field" for="z-gold" data-i18n="zakat.gold">স্বর্ণ (ভরি)</label>
+      <input type="number" id="z-gold" min="0" step="0.01" value="0">
+      <label class="field" for="z-silver" data-i18n="zakat.silver">রূপা (ভরি)</label>
+      <input type="number" id="z-silver" min="0" step="0.01" value="0">
+      <label class="field" for="z-business" data-i18n="zakat.business">ব্যবসায়িক পণ্যের মূল্য (৳)</label>
+      <input type="number" id="z-business" min="0" value="0">
+      <label class="field" for="z-receivable" data-i18n="zakat.receivable">পাওনা টাকা (৳)</label>
+      <input type="number" id="z-receivable" min="0" value="0">
+      <label class="field" for="z-debt" data-i18n="zakat.debt">ঋণ / দেনা (৳)</label>
+      <input type="number" id="z-debt" min="0" value="0">
+    </div>
+    <div class="card">
+      <h2 data-i18n="zakat.market">বাজারদর (পরিবর্তনযোগ্য)</h2>
+      <label class="field" for="z-gold-price" data-i18n="zakat.goldPrice">স্বর্ণের দাম প্রতি ভরি (৳)</label>
+      <input type="number" id="z-gold-price" min="0" value="175000">
+      <label class="field" for="z-silver-price" data-i18n="zakat.silverPrice">রূপার দাম প্রতি ভরি (৳)</label>
+      <input type="number" id="z-silver-price" min="0" value="3000">
+      <p class="hint" data-i18n="zakat.nisabHint">নিসাব = ৭.৫ ভরি স্বর্ণ বা ৫২.৫ ভরি রূপার সমমূল্যের মধ্যে যেটি কম।</p>
+    </div>
+    <button class="btn" data-i18n="zakat.btn" onclick="calcZakat()">যাকাত হিসাব করুন</button>
+    <div class="result" id="z-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/zakat" data-i18n="blogt.zakat">যাকাতের হিসাব কীভাবে করবেন — সহজ নিয়ম</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="zakat.fq1">নিসাব কী?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="zakat.fa1">নিসাব হলো সেই সর্বনিম্ন সম্পদের পরিমাণ যার উপর যাকাত ফরজ হয় — ৭.৫ ভরি স্বর্ণ বা ৫২.৫ ভরি রূপার সমমূল্য, যেটি কম সেটি ধরা হয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="zakat.fq2">স্বর্ণের দাম কোথা থেকে নেব?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="zakat.fa2">বাংলাদেশ জুয়েলার্স সমিতি (বাজুস) প্রতিদিন দাম ঘোষণা করে — সেই দিনের দাম এখানে বসিয়ে নিন, ফলাফল আরও নির্ভুল হবে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="zakat.fq3">ঋণ থাকলে কি বাদ যাবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="zakat.fa3">হ্যাঁ — মোট সম্পদ থেকে আপনার ঋণ বা দেনা বাদ দিয়েই যাকাতযোগ্য সম্পদ ধরা হয়। ঋণের ঘরে সঠিক পরিমাণ লিখুন।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. LAND ==================== -->
+  <section class="view" id="view-land">
+    <div class="tool-head">
+      <h1 data-i18n="land.h1">জমি পরিমাপ ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="land.desc">শতাংশ, কাঠা, বিঘা, একরসহ সব এককে জমির হিসাব।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="land.intro">জমি কিনতে গিয়ে শতাংশ-কাঠা-বিঘার হিসাব মেলাতে হিমশিম খেয়েছেন? দালালের কথায় নয়, নিজেই হিসাব মিলিয়ে নিন — এক একক থেকে সব এককে মুহূর্তে রূপান্তর।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="land.step1">জমির পরিমাণ লিখুন।</li>
+        <li data-i18n="land.step2">সেটি কোন এককে আছে, বেছে নিন।</li>
+        <li data-i18n="land.step3">"রূপান্তর করুন" চাপুন — সব এককের মান একসাথে পাবেন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="l-value" data-i18n="land.amount">পরিমাণ</label>
+      <input type="number" id="l-value" min="0" step="any" value="1">
+      <label class="field" for="l-from" data-i18n="land.unit">একক</label>
+      <select id="l-from">
+        <option value="shotangsho" data-i18n="units.shotangsho">শতাংশ</option>
+        <option value="katha" data-i18n="units.katha">কাঠা</option>
+        <option value="bigha" data-i18n="units.bigha">বিঘা</option>
+        <option value="acre" data-i18n="units.acre">একর</option>
+        <option value="sqft" data-i18n="units.sqft">বর্গফুট</option>
+        <option value="sqm" data-i18n="units.sqm">বর্গমিটার</option>
+        <option value="gonda" data-i18n="units.gonda">গন্ডা</option>
+        <option value="chotak" data-i18n="units.chotak">ছটাক</option>
+      </select>
+    </div>
+    <div class="note" data-i18n-html="land.note">⚠️ বিঘা ও কাঠার মাপ অঞ্চলভেদে ভিন্ন হয় (যেমন ঢাকায় ১ বিঘা ≈ ৩৩ শতাংশ, রাজশাহীতে ≈ ২০ শতাংশ)। এখানে প্রচলিত মান (১ বিঘা = ২০ কাঠা = ৩৩ শতাংশ) ব্যবহার করা হয়েছে।</div>
+    <button class="btn" data-i18n="land.btn" onclick="calcLand()">রূপান্তর করুন</button>
+    <div class="result" id="l-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/land" data-i18n="blogt.land">শতাংশ-কাঠা-বিঘা: জমি মাপার সহজ হিসাব</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="land.fq1">১ বিঘা কি সব জায়গায় সমান?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="land.fa1">না — এটাই সবচেয়ে বড় বিভ্রান্তি। ঢাকায় ১ বিঘা ≈ ৩৩ শতাংশ, রাজশাহীতে ≈ ২০ শতাংশ। দলিলে সবসময় শতাংশে মিলিয়ে নিন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="land.fq2">শতাংশ আর ডেসিমাল কি এক?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="land.fa2">হ্যাঁ, একই — ১ শতাংশ = ১ ডেসিমাল = ৪৩৫.৬ বর্গফুট।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="land.fq3">গন্ডা-ছটাক কোথায় ব্যবহার হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="land.fa3">চট্টগ্রামসহ কিছু অঞ্চলে গন্ডা (৮৬৪ বর্গফুট) ও ছটাক (৪৫ বর্গফুট) প্রচলিত — ১৬ ছটাক = ১ কাঠা।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. ELECTRICITY ==================== -->
+  <section class="view" id="view-electricity">
+    <div class="tool-head">
+      <h1 data-i18n="elec.h1">বিদ্যুৎ বিল ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="elec.desc">আবাসিক (LT-A) স্ল্যাব অনুযায়ী মাসিক বিদ্যুৎ বিলের আনুমানিক হিসাব।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="elec.intro">মাস শেষে বিদ্যুৎ বিল দেখে চমকে ওঠেন? কত ইউনিটে কত টাকা — স্ল্যাবের হিসাবটা জানা থাকলে বিল আসার আগেই অনুমান করা যায়। আপনার মিটার রিডিং বসিয়েই দেখুন।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="elec.step1">আপনার বিতরণ সংস্থা বেছে নিন।</li>
+        <li data-i18n="elec.step2">মাসে কত ইউনিট খরচ হয়েছে লিখুন (আগের ও পরের রিডিংয়ের পার্থক্য)।</li>
+        <li data-i18n="elec.step3">"বিল হিসাব করুন" চাপুন — স্ল্যাবভিত্তিক ভাঙনসহ মোট বিল দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="e-provider" data-i18n="elec.provider">বিতরণ সংস্থা</label>
+      <select id="e-provider">
+        <option>DESCO</option><option>NESCO</option><option>DPDC</option>
+        <option>WZPDCL</option><option>BREB</option><option>BPDB</option>
+      </select>
+      <label class="field" for="e-units" data-i18n="elec.units">মোট ব্যবহৃত ইউনিট (kWh)</label>
+      <input type="number" id="e-units" min="0" step="1" value="150">
+      <label class="field" for="e-load" data-i18n="elec.load">অনুমোদিত লোড (kW)</label>
+      <input type="number" id="e-load" min="0" step="0.5" value="2">
+      <p class="hint" data-i18n="elec.loadHint">লোড আপনার বিলের কাগজে লেখা থাকে।</p>
+    </div>
+    <div class="card">
+      <h2 data-i18n="elec.rates">স্ল্যাব রেট (পরিবর্তনযোগ্য) — ৳/ইউনিট</h2>
+      <label class="field" for="e-r-lifeline" data-i18n="elec.lifeline">লাইফলাইন (মোট ≤ ৫০ ইউনিট হলে সব ইউনিটে)</label>
+      <input type="number" id="e-r-lifeline" step="0.01" value="4.63">
+      <label class="field" for="e-r-75" data-i18n="elec.s75">১–৭৫ ইউনিট</label>
+      <input type="number" id="e-r-75" step="0.01" value="5.26">
+      <label class="field" for="e-r-200" data-i18n="elec.s200">৭৬–২০০ ইউনিট</label>
+      <input type="number" id="e-r-200" step="0.01" value="8.50">
+      <label class="field" for="e-r-300" data-i18n="elec.s300">২০১–৩০০ ইউনিট</label>
+      <input type="number" id="e-r-300" step="0.01" value="9.10">
+      <label class="field" for="e-r-400" data-i18n="elec.s400">৩০১–৪০০ ইউনিট</label>
+      <input type="number" id="e-r-400" step="0.01" value="9.62">
+      <label class="field" for="e-r-600" data-i18n="elec.s600">৪০১–৬০০ ইউনিট</label>
+      <input type="number" id="e-r-600" step="0.01" value="15.01">
+      <label class="field" for="e-r-above" data-i18n="elec.sAbove">৬০০+ ইউনিট</label>
+      <input type="number" id="e-r-above" step="0.01" value="17.35">
+      <label class="field" for="e-demand" data-i18n="elec.demand">ডিমান্ড চার্জ (৳/kW)</label>
+      <input type="number" id="e-demand" step="1" value="42">
+      <label class="field" for="e-vat" data-i18n="elec.vat">ভ্যাট (%)</label>
+      <input type="number" id="e-vat" step="0.1" value="5">
+      <p class="hint" data-i18n="elec.rateHint">ডিফল্ট রেট: BERC জুন ২০২৬ আবাসিক (LT-A) ট্যারিফ।</p>
+    </div>
+    <div class="note" data-i18n-html="elec.note">⚠️ এটি <strong>আনুমানিক</strong> হিসাব — প্রকৃত বিলের সাথে মিলিয়ে নিন। মিটার ভাড়া ও অন্যান্য চার্জ এতে অন্তর্ভুক্ত নয়।</div>
+    <button class="btn" data-i18n="elec.btn" onclick="calcElectricity()">বিল হিসাব করুন</button>
+    <div class="result" id="e-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/electricity" data-i18n="blogt.electricity">বিদ্যুৎ বিলের স্ল্যাব বুঝুন, বিলের চমক কমান</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="elec.fq1">৫০ ইউনিটের নিচে ব্যবহার করলে বিল কম কেন?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="elec.fa1">৫০ ইউনিট পর্যন্ত "লাইফলাইন" রেট (৳৪.৬৩) প্রযোজ্য — নিম্ন আয়ের পরিবারের জন্য ভর্তুকি। ৫১ ইউনিট হলেই পুরো হিসাব স্ল্যাব রেটে চলে যায়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="elec.fq2">ডিমান্ড চার্জ কী?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="elec.fa2">আপনার অনুমোদিত লোড (kW) অনুযায়ী মাসিক ফিক্সড চার্জ — ৳৪২/kW। বিলের কাগজে আপনার লোড লেখা থাকে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="elec.fq3">স্ল্যাব রেট বদলালে কী করব?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="elec.fa3">BERC মাঝে মাঝে রেট বদলায় — টুলের ভেতরে সব রেট পরিবর্তনযোগ্য, নতুন রেট বসিয়ে নিলেই হবে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. GPA ==================== -->
+  <section class="view" id="view-gpa">
+    <div class="tool-head">
+      <h1 data-i18n="gpa.h1">GPA / CGPA ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="gpa.desc">SSC / HSC পরীক্ষার GPA হিসাব — অফিসিয়াল গ্রেডিং পদ্ধতিতে।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="gpa.intro">রেজাল্টের আগে নিজেই GPA বের করে নিন — কোন বিষয়ে কত পেলে টার্গেট GPA হবে, সেটাও বোঝা যাবে। SSC-HSC-এর অফিসিয়াল গ্রেডিং পদ্ধতিতেই হিসাব হয়।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="gpa.step1">প্রতিটি বিষয়ের নাম ও নম্বর লিখুন (চাইলে বিষয় যোগ বা বাদ দিন)।</li>
+        <li data-i18n="gpa.step2">৪র্থ (ঐচ্ছিক) বিষয়টি বেছে নিন।</li>
+        <li data-i18n="gpa.step3">"GPA হিসাব করুন" চাপুন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2 data-i18n="gpa.subjects">বিষয়সমূহ ও নম্বর</h2>
+      <div id="g-subjects"></div>
+      <button class="btn btn-secondary" data-i18n="gpa.add" onclick="addSubject()">+ বিষয় যোগ করুন</button>
+      <label class="field" for="g-fourth" data-i18n="gpa.fourth">৪র্থ (ঐচ্ছিক) বিষয়</label>
+      <select id="g-fourth"></select>
+      <p class="hint" data-i18n="gpa.fourthHint">৪র্থ বিষয়ে গ্রেড পয়েন্ট ২.০০-এর বেশি হলে অতিরিক্ত অংশ যোগ হয়।</p>
+    </div>
+    <button class="btn" data-i18n="gpa.btn" onclick="calcGpa()">GPA হিসাব করুন</button>
+    <div class="result" id="g-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/gpa" data-i18n="blogt.gpa">GPA হিসাবের নিয়ম: ৪র্থ বিষয়ের বোনাসসহ</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gpa.fq1">৪র্থ বিষয়ের নম্বর কীভাবে ধরা হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gpa.fa1">৪র্থ বিষয়ে গ্রেড পয়েন্ট ২.০০-এর বেশি হলে শুধু অতিরিক্ত অংশ যোগ হয় — কম পেলে GPA কমে না।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gpa.fq2">এক বিষয়ে ফেল করলে কী হবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gpa.fa2">যেকোনো আবশ্যিক বিষয়ে ৩৩-এর নিচে পেলে (F) সামগ্রিক ফলাফল ফেল — বাকি সব বিষয়ে A+ পেলেও।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gpa.fq3">৮০ নম্বর পেলে গ্রেড পয়েন্ট কত?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gpa.fa3">৮০ বা তার বেশি = A+ = ৫.০০। ৭০–৭৯ = A (৪.০০), ৬০–৬৯ = A- (৩.৫০)।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. AGE ==================== -->
+  <section class="view" id="view-age">
+    <div class="tool-head">
+      <h1 data-i18n="age.h1">বয়স ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="age.desc">জন্মতারিখ থেকে সঠিক বয়স — বছর, মাস, দিন ও মোট দিনে।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="age.intro">চাকরির ফরম, পাসপোর্ট বা ভর্তির কাজে নিখুঁত বয়স লাগে — বছর-মাস-দিনে ভেঙে হিসাব করা কষ্টকর। জন্মতারিখ দিলেই সঠিক বয়স বেরিয়ে আসবে।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="age.step1">জন্মতারিখ বেছে নিন।</li>
+        <li data-i18n="age.step2">"বয়স হিসাব করুন" চাপুন — বছর, মাস, দিন ও মোট দিন দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="a-dob" data-i18n="age.dob">জন্মতারিখ</label>
+      <input type="date" id="a-dob">
+    </div>
+    <button class="btn" data-i18n="age.btn" onclick="calcAge()">বয়স হিসাব করুন</button>
+    <div class="result" id="a-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/age" data-i18n="blogt.age">সঠিক বয়স বের করার নিয়ম (ফরমের জন্য)</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="age.fq1">মোট দিনের হিসাব কেন দরকার?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="age.fa1">অনেক ফরমে (যেমন সরকারি চাকরি) বয়স দিনে হিসাব চাওয়া হয় — সেটাও এই টুলে পাবেন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="age.fq2">ভবিষ্যতের তারিখ দিলে কী হবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="age.fa2">জন্মতারিখ আজকের তারিখের পরে হতে পারে না — এমন হলে টুলটি সতর্ক করবে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="age.fq3">২৯ ফেব্রুয়ারিতে জন্ম হলে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="age.fa3">অধিবর্ষ (লিপ ইয়ার) ঠিকমতো ধরা হয় — ক্যালেন্ডারের নিয়মেই বয়স হিসাব হবে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. GOLD ==================== -->
+  <section class="view" id="view-gold">
+    <div class="tool-head">
+      <h1 data-i18n="gold.h1">স্বর্ণের দাম ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="gold.desc">ভরি থেকে আনা, রতি ও গ্রামে স্বর্ণের দাম।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="gold.intro">বিয়ের বাজার বা বিনিয়োগ — স্বর্ণ কিনতে গেলে ভরি-আনা-রতির হিসাব গুলিয়ে যায়। প্রতি ভরির দাম বসান, বাকি সব এককের দাম মুহূর্তে পেয়ে যান।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="gold.step1">প্রতি ভরি স্বর্ণের বর্তমান দাম লিখুন।</li>
+        <li data-i18n="gold.step2">"দাম হিসাব করুন" চাপুন — আনা, রতি ও গ্রামের দাম দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="gld-price" data-i18n="gold.price">প্রতি ভরি স্বর্ণের দাম (৳)</label>
+      <input type="number" id="gld-price" min="0" value="175000">
+      <p class="hint" data-i18n="gold.hint">১ ভরি = ১৬ আনা, ১ আনা = ৬ রতি, ১ ভরি = ১১.৬৬৪ গ্রাম।</p>
+    </div>
+    <button class="btn" data-i18n="gold.btn" onclick="calcGold()">দাম হিসাব করুন</button>
+    <div class="result" id="gld-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/gold" data-i18n="blogt.gold">ভরি-আনা-রতির হিসাব: স্বর্ণ কেনার আগে জানুন</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gold.fq1">১ ভরিতে কত আনা?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gold.fa1">১ ভরি = ১৬ আনা, ১ আনা = ৬ রতি। আর ১ ভরি = ১১.৬৬৪ গ্রাম।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gold.fq2">ক্যারেট অনুযায়ী দাম কি আলাদা?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gold.fa2">হ্যাঁ — ২২, ২১, ১৮ ক্যারেটের দাম ভিন্ন হয়। বাজুসের ঘোষিত সংশ্লিষ্ট ক্যারেটের দাম বসিয়ে হিসাব করুন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="gold.fq3">মজুরি কি ধরা আছে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="gold.fa3">না — এখানে শুধু স্বর্ণের দাম; গয়নার মজুরি ও ভ্যাট দোকানভেদে আলাদা যোগ হবে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FREELANCER TAX ==================== -->
+  <section class="view" id="view-freelancer-tax">
+    <div class="tool-head">
+      <h1 data-i18n="ftax.h1">ফ্রিল্যান্সার ট্যাক্স ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="ftax.desc">বাৎসরিক আয়ের উপর আনুমানিক আয়কর হিসাব।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="ftax.intro">অনলাইনে আয় করছেন কিন্তু ট্যাক্সের হিসাব বুঝতে পারছেন না? ফ্রিল্যান্সারদের জন্য বাৎসরিক আয়ের উপর আনুমানিক কর হিসাব করে নিন — রিটার্ন দেওয়ার আগে ধারণা পেয়ে যাবেন।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="ftax.step1">বাৎসরিক করযোগ্য আয় লিখুন।</li>
+        <li data-i18n="ftax.step2">করদাতার ধরন বেছে নিন।</li>
+        <li data-i18n="ftax.step3">"ট্যাক্স হিসাব করুন" চাপুন — স্ল্যাবভিত্তিক কর দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="f-income" data-i18n="ftax.income">বাৎসরিক করযোগ্য আয় (৳)</label>
+      <input type="number" id="f-income" min="0" value="600000">
+      <label class="field" for="f-category" data-i18n="ftax.category">করদাতার ধরন</label>
+      <select id="f-category">
+        <option value="375000" data-i18n="taxcat.general">সাধারণ ব্যক্তি (করমুক্ত ৩,৭৫,০০০)</option>
+        <option value="425000" data-i18n="taxcat.women">নারী / ৬৫+ প্রবীণ (করমুক্ত ৪,২৫,০০০)</option>
+        <option value="500000" data-i18n="taxcat.disabled">তৃতীয় লিঙ্গ / প্রতিবন্ধী (করমুক্ত ৫,০০,০০০)</option>
+        <option value="525000" data-i18n="taxcat.fighter">মুক্তিযোদ্ধা (করমুক্ত ৫,২৫,০০০)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2 data-i18n="ftax.slabs">স্ল্যাব (পরিবর্তনযোগ্য) — FY ২০২৫-২৬</h2>
+      <label class="field" data-i18n="ftax.free">করমুক্ত সীমা (৳)</label>
+      <input type="number" id="f-free" value="375000">
+      <label class="field" data-i18n="ftax.s1">পরবর্তী ৩,০০,০০০-এ হার (%)</label>
+      <input type="number" id="f-s1r" value="10">
+      <label class="field" data-i18n="ftax.s2">পরবর্তী ৪,০০,০০০-এ হার (%)</label>
+      <input type="number" id="f-s2r" value="15">
+      <label class="field" data-i18n="ftax.s3">পরবর্তী ৫,০০,০০০-এ হার (%)</label>
+      <input type="number" id="f-s3r" value="20">
+      <label class="field" data-i18n="ftax.s4">পরবর্তী ২০,০০,০০০-এ হার (%)</label>
+      <input type="number" id="f-s4r" value="25">
+      <label class="field" data-i18n="ftax.s5">অবশিষ্ট আয়ে হার (%)</label>
+      <input type="number" id="f-s5r" value="30">
+    </div>
+    <div class="note" data-i18n-html="ftax.note">⚠️ আনুমানিক হিসাব। ফ্রিল্যান্সারদের জন্য বিশেষ কর সুবিধা থাকতে পারে — কর উপদেষ্টার পরামর্শ নিন।</div>
+    <button class="btn" data-i18n="ftax.btn" onclick="calcFreelancerTax()">ট্যাক্স হিসাব করুন</button>
+    <div class="result" id="f-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/freelancer-tax" data-i18n="blogt.freelancer-tax">ফ্রিল্যান্সারদের ট্যাক্স গাইড: প্রথম রিটার্নের আগে</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="ftax.fq1">ফ্রিল্যান্সারদের করমুক্ত সীমা কি আলাদা?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="ftax.fa1">সাধারণ স্ল্যাবই প্রযোজ্য, তবে ITES বা ফ্রিল্যান্সিং আয়ে বিশেষ কর অব্যাহতি থাকতে পারে — NBR-এর সর্বশেষ প্রজ্ঞাপন দেখুন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="ftax.fq2">ডলারে আয় করলে কীভাবে হিসাব হবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="ftax.fa2">বাংলাদেশ ব্যাংকের সংশ্লিষ্ট অর্থবছরের গড় বিনিময় হারে টাকায় রূপান্তর করে মোট আয় ধরুন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="ftax.fq3">এই হিসাবই কি চূড়ান্ত?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="ftax.fa3">না — এটি আনুমানিক। রিবেট, উৎসে কর কর্তন ইত্যাদি মিলিয়ে চূড়ান্ত কর নির্ধারণ কর উপদেষ্টা দিয়ে করান।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. PRAYER ==================== -->
+  <section class="view" id="view-prayer">
+    <div class="tool-head">
+      <h1 data-i18n="prayer.h1">নামাজের সময়সূচী</h1>
+      <p class="desc" data-i18n="prayer.desc">আজকের পাঁচ ওয়াক্ত নামাজের সময় — জেলা অনুযায়ী।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="prayer.intro">নতুন জেলায় গেছেন, মসজিদের সময় জানা নেই? জেলা বেছে নিলেই আজকের পাঁচ ওয়াক্ত নামাজের সময় পেয়ে যাবেন।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="prayer.step1">আপনার জেলা বেছে নিন।</li>
+        <li data-i18n="prayer.step2">"সময়সূচী দেখুন" চাপুন — পাঁচ ওয়াক্তের সময় দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="p-district" data-i18n="prayer.district">জেলা</label>
+      <select id="p-district">
+        <option value="Dhaka" data-i18n="district.dhaka" selected>ঢাকা</option>
+        <option value="Chittagong" data-i18n="district.chittagong">চট্টগ্রাম</option>
+        <option value="Sylhet" data-i18n="district.sylhet">সিলেট</option>
+        <option value="Rajshahi" data-i18n="district.rajshahi">রাজশাহী</option>
+        <option value="Khulna" data-i18n="district.khulna">খুলনা</option>
+        <option value="Barisal" data-i18n="district.barisal">বরিশাল</option>
+        <option value="Rangpur" data-i18n="district.rangpur">রংপুর</option>
+        <option value="Mymensingh" data-i18n="district.mymensingh">ময়মনসিংহ</option>
+        <option value="Comilla" data-i18n="district.comilla">কুমিল্লা</option>
+        <option value="Cox's Bazar" data-i18n="district.cox">কক্সবাজার</option>
+      </select>
+    </div>
+    <div class="note" data-i18n-html="prayer.note">⚠️ সময় আনুমানিক — স্থানীয় মসজিদের সময়সূচীর সাথে মিলিয়ে নিন।</div>
+    <button class="btn" data-i18n="prayer.btn" onclick="loadPrayer()">সময়সূচী দেখুন</button>
+    <div class="result" id="p-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/prayer" data-i18n="blogt.prayer">সঠিক নামাজের সময় জানার উপায়</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="prayer.fq1">সময় কি ১০০% সঠিক?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="prayer.fa1">জ্যোতির্বৈজ্ঞানিক হিসাবে আনুমানিক — স্থানীয় মসজিদের সাথে ৫-১০ মিনিট পার্থক্য হতে পারে, মসজিদের সময়ই চূড়ান্ত ধরুন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="prayer.fq2">ইন্টারনেট ছাড়া চলবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="prayer.fa2">না — সময় লাইভ API থেকে আসে, তাই ইন্টারনেট সংযোগ লাগবে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="prayer.fq3">কোন পদ্ধতির হিসাব?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="prayer.fa3">স্ট্যান্ডার্ড জ্যোতির্বৈজ্ঞানিক পদ্ধতি — হানাফি আসরের সময়ে কিছুটা পার্থক্য থাকতে পারে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. EMI ==================== -->
+  <section class="view" id="view-emi">
+    <div class="tool-head">
+      <h1 data-i18n="emi.h1">EMI / লোন ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="emi.desc">মাসিক কিস্তি ও মোট সুদের হিসাব।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="emi.intro">লোন নেওয়ার আগে জেনে নিন — প্রতি মাসে কত কিস্তি দিতে হবে, আর মোট কত সুদ গুনতে হবে। চোখ বুজে সই করার আগে হিসাবটা মিলিয়ে নিন।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="emi.step1">ঋণের পরিমাণ, বাৎসরিক সুদের হার ও মেয়াদ (মাসে) লিখুন।</li>
+        <li data-i18n="emi.step2">"EMI হিসাব করুন" চাপুন — মাসিক কিস্তি ও মোট সুদ দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="emi-principal" data-i18n="emi.principal">ঋণের পরিমাণ (৳)</label>
+      <input type="number" id="emi-principal" min="0" value="500000">
+      <label class="field" for="emi-rate" data-i18n="emi.rate">বাৎসরিক সুদের হার (%)</label>
+      <input type="number" id="emi-rate" min="0" step="0.1" value="12">
+      <label class="field" for="emi-months" data-i18n="emi.months">মেয়াদ (মাস)</label>
+      <input type="number" id="emi-months" min="1" step="1" value="36">
+    </div>
+    <button class="btn" data-i18n="emi.btn" onclick="calcEmi()">EMI হিসাব করুন</button>
+    <div class="result" id="emi-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/emi" data-i18n="blogt.emi">লোন নেওয়ার আগে EMI হিসাব কেন জরুরি</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="emi.fq1">EMI কীভাবে হিসাব হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="emi.fa1">রিডিউসিং ব্যালান্স পদ্ধতিতে — প্রতি মাসে বকেয়া আসলের উপর সুদ ধরা হয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="emi.fq2">মেয়াদ বাড়ালে কিস্তি কমে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="emi.fa2">হ্যাঁ, মাসিক কিস্তি কমে — কিন্তু মোট সুদ অনেক বেড়ে যায়। দুটোই দেখে সিদ্ধান্ত নিন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="emi.fq3">ফ্ল্যাট রেট আর রিডিউসিং রেট কি এক?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="emi.fa3">না — ফ্ল্যাট রেটে পুরো আসলের উপর সুদ ধরা হয়, ফলে প্রকৃত খরচ বেশি। ব্যাংক সাধারণত রিডিউসিং পদ্ধতি ব্যবহার করে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. CURRENCY ==================== -->
+  <section class="view" id="view-currency">
+    <div class="tool-head">
+      <h1 data-i18n="cur.h1">মুদ্রা কনভার্টার</h1>
+      <p class="desc" data-i18n="cur.desc">লাইভ এক্সচেঞ্জ রেটে মুদ্রা রূপান্তর।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="cur.intro">প্রবাস থেকে টাকা পাঠাবেন, নাকি অনলাইনে ডলারে কিনবেন? লাইভ রেটে মুহূর্তে রূপান্তর করে নিন — দোকানির রেটের সাথে তুলনা করতেও কাজে লাগবে।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="cur.step1">পরিমাণ ও মুদ্রা বেছে নিন।</li>
+        <li data-i18n="cur.step2">ইন্টারনেট থাকলে লাইভ রেটেই হবে; না থাকলে ম্যানুয়াল রেট বসান।</li>
+        <li data-i18n="cur.step3">"রূপান্তর করুন" চাপুন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="c-amount" data-i18n="cur.amount">পরিমাণ</label>
+      <input type="number" id="c-amount" min="0" step="any" value="100">
+      <label class="field" for="c-from" data-i18n="cur.from">থেকে</label>
+      <select id="c-from"></select>
+      <label class="field" for="c-to" data-i18n="cur.to">এতে</label>
+      <select id="c-to"></select>
+      <label class="field" for="c-manual"><span data-i18n="cur.manual">ম্যানুয়াল রেট (ঐচ্ছিক — ১</span> <span id="c-from-lbl">USD</span> = <span data-i18n="cur.manual2">কত</span> <span id="c-to-lbl">BDT</span>)</label>
+      <input type="number" id="c-manual" min="0" step="any" data-i18n-ph="cur.manualPh" placeholder="খালি রাখলে লাইভ রেট">
+      <p class="hint" data-i18n="cur.hint">ইন্টারনেট না থাকলে ম্যানুয়াল রেট দিন।</p>
+    </div>
+    <button class="btn" data-i18n="cur.btn" onclick="calcCurrency()">রূপান্তর করুন</button>
+    <div class="result" id="c-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/currency" data-i18n="blogt.currency">টাকা পাঠানোর আগে এক্সচেঞ্জ রেট যাচাই করুন</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="cur.fq1">রেট কি ব্যাংকের রেটের সমান?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="cur.fa1">আন্তর্জাতিক মিড-মার্কেট রেট দেখানো হয় — ব্যাংক বা মানি এক্সচেঞ্জ সাধারণত ১-৩ টাকা কম-বেশি দেয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="cur.fq2">অফলাইনে কি চলবে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="cur.fa2">হ্যাঁ — ম্যানুয়াল রেটের ঘরে রেট বসিয়ে দিলেই অফলাইনে হিসাব হবে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="cur.fq3">কোন মুদ্রাগুলো আছে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="cur.fa3">BDT, USD, EUR, GBP, SAR, AED, INRসহ প্রবাসীদের প্রয়োজনীয় ১৫টি মুদ্রা।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 11. BMI ==================== -->
+  <section class="view" id="view-bmi">
+    <div class="tool-head">
+      <h1 data-i18n="bmi.h1">BMI ক্যালকুলেটর</h1>
+      <p class="desc" data-i18n="bmi.desc">উচ্চতা ও ওজন থেকে বডি মাস ইনডেক্স।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="bmi.intro">ওজন ঠিক আছে তো, নাকি সতর্ক হওয়ার সময়? উচ্চতা-ওজন দিলেই BMI বেরিয়ে আসবে — স্বাস্থ্যের প্রাথমিক ধারণা পেতে।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="bmi.step1">উচ্চতা (সেন্টিমিটার) ও ওজন (কেজি) লিখুন।</li>
+        <li data-i18n="bmi.step2">"BMI হিসাব করুন" চাপুন — ক্যাটাগরিসহ ফলাফল দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="bmi-height" data-i18n="bmi.height">উচ্চতা (সেন্টিমিটার)</label>
+      <input type="number" id="bmi-height" min="0" step="0.1" value="165">
+      <label class="field" for="bmi-weight" data-i18n="bmi.weight">ওজন (কেজি)</label>
+      <input type="number" id="bmi-weight" min="0" step="0.1" value="65">
+    </div>
+    <div class="note" data-i18n-html="bmi.note">⚠️ BMI একটি সাধারণ নির্দেশক মাত্র — চিকিৎসা পরামর্শের বিকল্প নয়।</div>
+    <button class="btn" data-i18n="bmi.btn" onclick="calcBmi()">BMI হিসাব করুন</button>
+    <div class="result" id="bmi-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/bmi" data-i18n="blogt.bmi">BMI কী বলে আপনার স্বাস্থ্য সম্পর্কে</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="bmi.fq1">BMI ২৫ মানে কি মোটা?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="bmi.fa1">২৫–২৯.৯ মানে অতিরিক্ত ওজন, ৩০+ মানে স্থূলতা। ১৮.৫–২৪.৯ স্বাভাবিক ধরা হয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="bmi.fq2">খেলোয়াড়দের জন্য কি প্রযোজ্য?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="bmi.fa2">পেশি বেশি থাকলে BMI বেশি দেখাতে পারে — সেক্ষেত্রে চিকিৎসকের পরামর্শই নির্ভরযোগ্য।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="bmi.fq3">BMI কি রোগ নির্ণয় করে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="bmi.fa3">না — এটি শুধু স্ক্রিনিং টুল। কোনো সিদ্ধান্তের আগে চিকিৎসকের পরামর্শ নিন।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 12. DATE ==================== -->
+  <section class="view" id="view-date">
+    <div class="tool-head">
+      <h1 data-i18n="date.h1">তারিখ কনভার্টার</h1>
+      <p class="desc" data-i18n="date.desc">ইংরেজি তারিখ ↔ বাংলা (বঙ্গাব্দ) তারিখ।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="date.intro">দলিল-দস্তাবেজে বাংলা তারিখ লিখতে হয়, আবার অফিসে ইংরেজি — দুটোর মধ্যে যাতায়াত এখন এক ক্লিকেই।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="date.step1">ইংরেজি তারিখ বেছে "বাংলা তারিখ দেখুন" চাপুন, অথবা</li>
+        <li data-i18n="date.step2">বাংলা দিন-মাস-বছর বসিয়ে "ইংরেজি তারিখ দেখুন" চাপুন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2 data-i18n="date.g2b">ইংরেজি → বাংলা</h2>
+      <label class="field" for="d-greg" data-i18n="date.gregDate">ইংরেজি তারিখ</label>
+      <input type="date" id="d-greg">
+      <button class="btn" data-i18n="date.btn1" onclick="calcToBangla()">বাংলা তারিখ দেখুন</button>
+      <div class="result" id="d-result1"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="date.b2g">বাংলা → ইংরেজি</h2>
+      <label class="field" for="d-bn-day" data-i18n="date.day">দিন</label>
+      <input type="number" id="d-bn-day" min="1" max="32" value="1">
+      <label class="field" for="d-bn-month" data-i18n="date.month">মাস</label>
+      <select id="d-bn-month"></select>
+      <label class="field" for="d-bn-year" data-i18n="date.bnYear">বছর (বঙ্গাব্দ)</label>
+      <input type="number" id="d-bn-year" min="1300" max="1500" value="1432">
+      <button class="btn" data-i18n="date.btn2" onclick="calcToGregorian()">ইংরেজি তারিখ দেখুন</button>
+      <div class="result" id="d-result2"></div>
+    </div>
+    <div class="note" data-i18n-html="date.note">⚠️ বঙ্গাব্দ রূপান্তর আনুমানিক (পহেলা বৈশাখ = ১৪ এপ্রিল ধরে)।</div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/date" data-i18n="blogt.date">বাংলা-ইংরেজি তারিখ রূপান্তরের সহজ নিয়ম</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="date.fq1">হিসাব কি নিখুঁত?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="date.fa1">পহেলা বৈশাখ = ১৪ এপ্রিল ধরে আনুমানিক — সরকারি কাজে বাংলা একাডেমির পঞ্জিকা মিলিয়ে নিন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="date.fq2">বঙ্গাব্দ কীভাবে বের হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="date.fa2">বৈশাখ থেকে পৌষের মধ্যে হলে ইংরেজি সাল − ৫৯৩, মাঘ থেকে চৈত্রে হলে − ৫৯৪।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="date.fq3">বাংলা মাসের দিনসংখ্যা?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="date.fa3">বৈশাখ–ভাদ্র ৩১ দিন, আশ্বিন–চৈত্র ৩০ দিন (সরকারি সংস্কার অনুযায়ী)।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 13. MESS ==================== -->
+  <section class="view" id="view-mess">
+    <div class="tool-head">
+      <h1 data-i18n="mess.h1">মেস খরচ ভাগাভাগি</h1>
+      <p class="desc" data-i18n="mess.desc">মোট খরচ সদস্যদের মধ্যে সমান ভাগ + ব্যক্তিগত অতিরিক্ত খরচ।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="mess.intro">মাস শেষে মেসের হিসাব নিয়ে ঝগড়া? মোট খরচ আর যার যার ব্যক্তিগত খরচ বসিয়ে দিন — প্রত্যেকে কত দেবে, নির্ভুলভাবে বেরিয়ে আসবে।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="mess.step1">মোট খরচ লিখুন।</li>
+        <li data-i18n="mess.step2">সদস্যদের নাম ও ব্যক্তিগত অতিরিক্ত খরচ (যদি থাকে) বসান।</li>
+        <li data-i18n="mess.step3">"ভাগ করুন" চাপুন — প্রত্যেকের অংশ দেখাবে।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="m-total" data-i18n="mess.total">মোট খরচ (৳)</label>
+      <input type="number" id="m-total" min="0" value="9000">
+      <h2 data-i18n="mess.members">সদস্যগণ</h2>
+      <div id="m-members"></div>
+      <button class="btn btn-secondary" data-i18n="mess.add" onclick="addMember()">+ সদস্য যোগ করুন</button>
+      <p class="hint" data-i18n="mess.hint">অতিরিক্ত = শুধু ওই সদস্যের ব্যক্তিগত খরচ (যেমন নিজের ওষুধ)।</p>
+    </div>
+    <button class="btn" data-i18n="mess.btn" onclick="calcMess()">ভাগ করুন</button>
+    <div class="result" id="m-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/mess" data-i18n="blogt.mess">মেসের হিসাব ঝামেলাহীন রাখার উপায়</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="mess.fq1">ব্যক্তিগত খরচ কীভাবে ধরা হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="mess.fa1">মোট থেকে সব ব্যক্তিগত খরচ বাদ দিয়ে বাকিটা সমান ভাগ হয়, তারপর প্রত্যেকের নিজের অতিরিক্তটা যোগ হয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="mess.fq2">কেউ মাঝমাসে এলে?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="mess.fa2">তার থাকার দিন অনুপাতে মোট খরচের অংশ বের করে "মোট খরচ" ঘরে বসিয়ে হিসাব করুন।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="mess.fq3">সদস্য যোগ বা বাদ করা যায়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="mess.fa3">হ্যাঁ — "+ সদস্য যোগ করুন" দিয়ে বাড়ান, × চাপলে বাদ যাবে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 14. QURBANI ==================== -->
+  <section class="view" id="view-qurbani">
+    <div class="tool-head">
+      <h1 data-i18n="qurb.h1">কুরবানির পশুর দাম অনুমান</h1>
+      <p class="desc" data-i18n="qurb.desc">জীবিত ওজন ও প্রতি কেজি দর থেকে আনুমানিক দাম।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="qurb.intro">হাটে যাওয়ার আগে ধারণা নিয়ে যান — পশুর ওজন আর প্রতি কেজি দর বসালেই আনুমানিক দাম বেরিয়ে আসবে, দরদামে ঠকবেন না।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="qurb.step1">পশুর আনুমানিক ওজন (কেজি) লিখুন।</li>
+        <li data-i18n="qurb.step2">হাটের চলতি প্রতি কেজি দর বসান।</li>
+        <li data-i18n="qurb.step3">"দাম অনুমান করুন" চাপুন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="q-weight" data-i18n="qurb.weight">পশুর ওজন (কেজি)</label>
+      <input type="number" id="q-weight" min="0" step="1" value="300">
+      <label class="field" for="q-pricekg" data-i18n="qurb.pricekg">প্রতি কেজি দর (৳)</label>
+      <input type="number" id="q-pricekg" min="0" step="1" value="550">
+      <p class="hint" data-i18n="qurb.hint">হাটের চলতি দর অনুযায়ী প্রতি কেজি দর বসান।</p>
+    </div>
+    <div class="note" data-i18n-html="qurb.note">⚠️ আনুমানিক মূল্য (±১০%) — জাত, স্বাস্থ্য ও হাটের চাহিদায় দাম ভিন্ন হয়।</div>
+    <button class="btn" data-i18n="qurb.btn" onclick="calcQurbani()">দাম অনুমান করুন</button>
+    <div class="result" id="q-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/qurbani" data-i18n="blogt.qurbani">কুরবানির পশু কেনার আগে দামের ধারণা</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="qurb.fq1">প্রতি কেজি দর কত ধরা উচিত?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="qurb.fa1">ঈদের ১-২ সপ্তাহ আগে হাট ঘুরে বা পরিচিত ব্যাপারীর কাছ থেকে চলতি দর জেনে নিন — এলাকাভেদে ভিন্ন হয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="qurb.fq2">±১০% রেঞ্জ কেন?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="qurb.fa2">জাত, স্বাস্থ্য, বয়স ও চাহিদার উপর দাম ওঠানামা করে — রেঞ্জটা বাস্তবসম্মত ধারণা দেয়।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="qurb.fq3">ওজন কীভাবে মাপব?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="qurb.fa3">বুকের বেড় ও দৈর্ঘ্যের ফিতার মাপ থেকে ওজনের ফর্মুলা আছে, অথবা অভিজ্ঞ ব্যাপারীর অনুমান নিন।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 15. INCOME TAX ==================== -->
+  <section class="view" id="view-income-tax">
+    <div class="tool-head">
+      <h1 data-i18n="itax.h1">ইনকাম ট্যাক্স হিসাব</h1>
+      <p class="desc" data-i18n="itax.desc">চাকরিজীবী / e-TIN ধারীদের বাৎসরিক আয়কর হিসাব।</p>
+    </div>
+    <div class="card intro-card">
+      <p data-i18n="itax.intro">বেতন থেকে কত ট্যাক্স কাটবে, আগে থেকেই জেনে রাখুন — রিটার্ন জমার সময় অপ্রস্তুত হবেন না। FY ২০২৫-২৬-এর স্ল্যাব অনুযায়ী হিসাব।</p>
+    </div>
+    <div class="card howto-card">
+      <h2 data-i18n="howto.title">কীভাবে ব্যবহার করবেন</h2>
+      <ol class="steps">
+        <li data-i18n="itax.step1">বাৎসরিক করযোগ্য আয় লিখুন।</li>
+        <li data-i18n="itax.step2">করদাতার ধরন বেছে নিন।</li>
+        <li data-i18n="itax.step3">"ট্যাক্স হিসাব করুন" চাপুন।</li>
+      </ol>
+    </div>
+    <div class="card">
+      <label class="field" for="t-income" data-i18n="itax.income">বাৎসরিক করযোগ্য আয় (৳)</label>
+      <input type="number" id="t-income" min="0" value="800000">
+      <label class="field" for="t-category" data-i18n="itax.category">করদাতার ধরন</label>
+      <select id="t-category">
+        <option value="375000" data-i18n="taxcat.general">সাধারণ ব্যক্তি (করমুক্ত ৩,৭৫,০০০)</option>
+        <option value="425000" data-i18n="taxcat.women">নারী / ৬৫+ প্রবীণ (করমুক্ত ৪,২৫,০০০)</option>
+        <option value="500000" data-i18n="taxcat.disabled">তৃতীয় লিঙ্গ / প্রতিবন্ধী (করমুক্ত ৫,০০,০০০)</option>
+        <option value="525000" data-i18n="taxcat.fighter">মুক্তিযোদ্ধা (করমুক্ত ৫,২৫,০০০)</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2 data-i18n="itax.slabs">স্ল্যাব (পরিবর্তনযোগ্য) — FY ২০২৫-২৬</h2>
+      <label class="field" data-i18n="itax.free">করমুক্ত সীমা (৳)</label>
+      <input type="number" id="t-free" value="375000">
+      <label class="field" data-i18n="itax.s1">পরবর্তী ৩,০০,০০০-এ হার (%)</label>
+      <input type="number" id="t-s1r" value="10">
+      <label class="field" data-i18n="itax.s2">পরবর্তী ৪,০০,০০০-এ হার (%)</label>
+      <input type="number" id="t-s2r" value="15">
+      <label class="field" data-i18n="itax.s3">পরবর্তী ৫,০০,০০০-এ হার (%)</label>
+      <input type="number" id="t-s3r" value="20">
+      <label class="field" data-i18n="itax.s4">পরবর্তী ২০,০০,০০০-এ হার (%)</label>
+      <input type="number" id="t-s4r" value="25">
+      <label class="field" data-i18n="itax.s5">অবশিষ্ট আয়ে হার (%)</label>
+      <input type="number" id="t-s5r" value="30">
+    </div>
+    <div class="note" data-i18n-html="itax.note">⚠️ আনুমানিক হিসাব। বিনিয়োগ রিবেট, ন্যূনতম কর (পুরাতন করদাতা ৫,০০০ / নতুন ১,০০০) প্রযোজ্য হতে পারে — রিটার্নের আগে কর উপদেষ্টার পরামর্শ নিন।</div>
+    <button class="btn" data-i18n="itax.btn" onclick="calcIncomeTax()">ট্যাক্স হিসাব করুন</button>
+    <div class="result" id="t-result"></div>
+        <p class="related-link"><span data-i18n="related.label">বিস্তারিত গাইড:</span> <a href="#/blog/income-tax" data-i18n="blogt.income-tax">বেতনভুক্তদের আয়কর: স্ল্যাব সহজ ভাষায়</a></p>
+    <div class="faq">
+      <h2 data-i18n="faq.title">সচরাচর জিজ্ঞাসা</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="itax.fq1">করমুক্ত সীমা কত?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="itax.fa1">সাধারণ ব্যক্তির ৳৩,৭৫,০০০; নারী ও প্রবীণদের ৳৪,২৫,০০০। এর নিচে আয় হলে কর শূন্য (ন্যূনতম কর প্রযোজ্য হতে পারে)।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="itax.fq2">বিনিয়োগ রিবেট কী?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="itax.fa2">অনুমোদিত খাতে (সঞ্চয়পত্র, DPS ইত্যাদি) বিনিয়োগে কর রিবেট মেলে — এই হিসাবে ধরা নেই, তাই প্রকৃত কর কমতে পারে।</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head" onclick="toggleAcc(this)"><span data-i18n="itax.fq3">রিটার্ন কখন জমা দিতে হয়?</span><span class="acc-icon">+</span></button>
+          <div class="acc-body"><p data-i18n="itax.fa3">সাধারণত ৩০ নভেম্বরের মধ্যে (ব্যক্তি করদাতা) — NBR-এর ঘোষণা অনুযায়ী তারিখ বদলাতে পারে।</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOG INDEX ==================== -->
+  <section class="view" id="view-blog">
+    <div class="tool-head">
+      <h1 data-i18n="blog.h1">ব্লগ — ব্যবহারিক গাইড</h1>
+      <p class="desc" data-i18n="blog.sub">প্রতিটি টুলের পেছনের সহজ নিয়ম, কার্যকর টিপস আর সচরাচর প্রশ্নের উত্তর — সহজ বাংলায়।</p>
+    </div>
+    <!-- ============================================================
+         ADSENSE SLOT: BLOG INDEX
+         Paste your Google AdSense code inside the div below.
+         ============================================================ -->
+    <div class="ad-slot" data-ad-slot="blog"><span data-i18n="ad">বিজ্ঞাপন</span></div>
+    <div id="blog-index" class="blog-grid" aria-live="polite"></div>
+  </section>
+
+  <!-- ==================== BLOG ARTICLE ==================== -->
+  <section class="view" id="view-blog-article">
+    <div id="blog-article" aria-live="polite"></div>
+    <!-- ============================================================
+         ADSENSE SLOT: BLOG ARTICLE
+         Paste your Google AdSense code inside the div below.
+         ============================================================ -->
+    <div class="ad-slot" data-ad-slot="blog-article"><span data-i18n="ad">বিজ্ঞাপন</span></div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="view" id="view-about">
+    <div class="tool-head">
+      <h1 data-i18n="about.h1">আমাদের সম্পর্কে</h1>
+    </div>
+    <div class="card page-card">
+      <p data-i18n="about.p1"></p>
+      <p data-i18n="about.p2"></p>
+      <p data-i18n="about.p3"></p>
+      <p class="tagline" data-i18n="about.tagline">সব হিসাব, এক ঠিকানায় — এটাই আমাদের প্রতিশ্রুতি।</p>
+    </div>
+  </section>
+
+  <!-- ==================== PRIVACY ==================== -->
+  <section class="view" id="view-privacy">
+    <div class="tool-head">
+      <h1 data-i18n="privacy.h1">প্রাইভেসি পলিসি</h1>
+      <p class="desc" data-i18n="privacy.updated"></p>
+    </div>
+    <div class="card page-card">
+      <p data-i18n="privacy.p1"></p>
+      <h2 data-i18n="privacy.h2a"></h2>
+      <ul class="tips">
+        <li data-i18n="privacy.li1"></li>
+        <li data-i18n="privacy.li2"></li>
+      </ul>
+      <h2 data-i18n="privacy.h2b"></h2>
+      <p data-i18n="privacy.p2"></p>
+      <h2 data-i18n="privacy.h2c"></h2>
+      <p data-i18n="privacy.p3"></p>
+      <h2 data-i18n="privacy.h2d"></h2>
+      <p data-i18n="privacy.p4"></p>
+      <h2 data-i18n="privacy.h2e"></h2>
+      <p data-i18n="privacy.p5"></p>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="view" id="view-contact">
+    <div class="tool-head">
+      <h1 data-i18n="contact.h1">যোগাযোগ</h1>
+      <p class="desc" data-i18n="contact.intro"></p>
+    </div>
+    <div class="card">
+      <form class="contact-form" onsubmit="return sendContact(event)">
+        <label class="field" for="c-name" data-i18n="contact.name">আপনার নাম</label>
+        <input type="text" id="c-name" required>
+        <label class="field" for="c-email" data-i18n="contact.email">আপনার ইমেইল</label>
+        <input type="email" id="c-email" required>
+        <label class="field" for="c-subject" data-i18n="contact.subject">বিষয়</label>
+        <input type="text" id="c-subject" required>
+        <label class="field" for="c-message" data-i18n="contact.message">বার্তা</label>
+        <textarea id="c-message" rows="5" required></textarea>
+        <button class="btn" type="submit" data-i18n="contact.send">পাঠান</button>
+      </form>
+      <p class="hint" data-i18n="contact.note"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     ADSENSE SLOT: FOOTER
+     আপনার Google AdSense কোড নিচের div-এর ভেতরে পেস্ট করুন।
+     Paste your Google AdSense code inside the div below.
+     ============================================================ -->
+<div class="ad-slot" data-ad-slot="footer"><span data-i18n="ad">বিজ্ঞাপন</span></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#/about" data-i18n="footer.about">আমাদের সম্পর্কে</a>
+      <a href="#/blog" data-i18n="footer.blog">ব্লগ</a>
+      <a href="#/privacy" data-i18n="footer.privacy">প্রাইভেসি পলিসি</a>
+      <a href="#/contact" data-i18n="footer.contact">যোগাযোগ</a>
+    </nav>
+    <p><strong>BanglaTools</strong> <span data-i18n="footer.tag">— সব হিসাব, এক ঠিকানায়।</span></p>
+    <p class="disclaimer" data-i18n="footer.disclaimer">সব হিসাব আনুমানিক ও শিক্ষামূলক উদ্দেশ্যে। আর্থিক, আইনি বা ধর্মীয় সিদ্ধান্তের আগে বিশেষজ্ঞের পরামর্শ নিন। আপনার তথ্য আপনার ডিভাইসেই থাকে — সার্ভারে পাঠানো হয় না।</p>
+  </div>
+</footer>
+
+<!-- JSON-LD FAQPage schema: tools 6-10 -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"১ ভরিতে কত আনা?","acceptedAnswer":{"@type":"Answer","text":"১ ভরি = ১৬ আনা, ১ আনা = ৬ রতি। আর ১ ভরি = ১১.৬৬৪ গ্রাম।"}},
+{"@type":"Question","name":"ক্যারেট অনুযায়ী দাম কি আলাদা?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ — ২২, ২১, ১৮ ক্যারেটের দাম ভিন্ন হয়। বাজুসের ঘোষিত সংশ্লিষ্ট ক্যারেটের দাম বসিয়ে হিসাব করুন।"}},
+{"@type":"Question","name":"মজুরি কি ধরা আছে?","acceptedAnswer":{"@type":"Answer","text":"না — এখানে শুধু স্বর্ণের দাম; গয়নার মজুরি ও ভ্যাট দোকানভেদে আলাদা যোগ হবে।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"ফ্রিল্যান্সারদের করমুক্ত সীমা কি আলাদা?","acceptedAnswer":{"@type":"Answer","text":"সাধারণ স্ল্যাবই প্রযোজ্য, তবে ITES বা ফ্রিল্যান্সিং আয়ে বিশেষ কর অব্যাহতি থাকতে পারে — NBR-এর সর্বশেষ প্রজ্ঞাপন দেখুন।"}},
+{"@type":"Question","name":"ডলারে আয় করলে কীভাবে হিসাব হবে?","acceptedAnswer":{"@type":"Answer","text":"বাংলাদেশ ব্যাংকের সংশ্লিষ্ট অর্থবছরের গড় বিনিময় হারে টাকায় রূপান্তর করে মোট আয় ধরুন।"}},
+{"@type":"Question","name":"এই হিসাবই কি চূড়ান্ত?","acceptedAnswer":{"@type":"Answer","text":"না — এটি আনুমানিক। রিবেট, উৎসে কর কর্তন ইত্যাদি মিলিয়ে চূড়ান্ত কর নির্ধারণ কর উপদেষ্টা দিয়ে করান।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"নামাজের সময় কি ১০০% সঠিক?","acceptedAnswer":{"@type":"Answer","text":"জ্যোতির্বৈজ্ঞানিক হিসাবে আনুমানিক — স্থানীয় মসজিদের সাথে ৫-১০ মিনিট পার্থক্য হতে পারে, মসজিদের সময়ই চূড়ান্ত ধরুন।"}},
+{"@type":"Question","name":"ইন্টারনেট ছাড়া কি নামাজের সময় দেখা যাবে?","acceptedAnswer":{"@type":"Answer","text":"না — সময় লাইভ API থেকে আসে, তাই ইন্টারনেট সংযোগ লাগবে।"}},
+{"@type":"Question","name":"কোন পদ্ধতির হিসাব?","acceptedAnswer":{"@type":"Answer","text":"স্ট্যান্ডার্ড জ্যোতির্বৈজ্ঞানিক পদ্ধতি — হানাফি আসরের সময়ে কিছুটা পার্থক্য থাকতে পারে।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"EMI কীভাবে হিসাব হয়?","acceptedAnswer":{"@type":"Answer","text":"রিডিউসিং ব্যালান্স পদ্ধতিতে — প্রতি মাসে বকেয়া আসলের উপর সুদ ধরা হয়।"}},
+{"@type":"Question","name":"মেয়াদ বাড়ালে কিস্তি কমে?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ, মাসিক কিস্তি কমে — কিন্তু মোট সুদ অনেক বেড়ে যায়। দুটোই দেখে সিদ্ধান্ত নিন।"}},
+{"@type":"Question","name":"ফ্ল্যাট রেট আর রিডিউসিং রেট কি এক?","acceptedAnswer":{"@type":"Answer","text":"না — ফ্ল্যাট রেটে পুরো আসলের উপর সুদ ধরা হয়, ফলে প্রকৃত খরচ বেশি।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"মুদ্রার রেট কি ব্যাংকের রেটের সমান?","acceptedAnswer":{"@type":"Answer","text":"আন্তর্জাতিক মিড-মার্কেট রেট দেখানো হয় — ব্যাংক বা মানি এক্সচেঞ্জ সাধারণত ১-৩ টাকা কম-বেশি দেয়।"}},
+{"@type":"Question","name":"অফলাইনে কি মুদ্রা রূপান্তর হবে?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ — ম্যানুয়াল রেটের ঘরে রেট বসিয়ে দিলেই অফলাইনে হিসাব হবে।"}},
+{"@type":"Question","name":"কোন মুদ্রাগুলো আছে?","acceptedAnswer":{"@type":"Answer","text":"BDT, USD, EUR, GBP, SAR, AED, INRসহ প্রবাসীদের প্রয়োজনীয় ১৫টি মুদ্রা।"}}]}
+</script>
+<!-- JSON-LD FAQPage schema: tools 11-15 -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"BMI ২৫ মানে কি মোটা?","acceptedAnswer":{"@type":"Answer","text":"২৫–২৯.৯ মানে অতিরিক্ত ওজন, ৩০+ মানে স্থূলতা। ১৮.৫–২৪.৯ স্বাভাবিক ধরা হয়।"}},
+{"@type":"Question","name":"খেলোয়াড়দের জন্য কি BMI প্রযোজ্য?","acceptedAnswer":{"@type":"Answer","text":"পেশি বেশি থাকলে BMI বেশি দেখাতে পারে — সেক্ষেত্রে চিকিৎসকের পরামর্শই নির্ভরযোগ্য।"}},
+{"@type":"Question","name":"BMI কি রোগ নির্ণয় করে?","acceptedAnswer":{"@type":"Answer","text":"না — এটি শুধু স্ক্রিনিং টুল। কোনো সিদ্ধান্তের আগে চিকিৎসকের পরামর্শ নিন।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"বাংলা তারিখের হিসাব কি নিখুঁত?","acceptedAnswer":{"@type":"Answer","text":"পহেলা বৈশাখ = ১৪ এপ্রিল ধরে আনুমানিক — সরকারি কাজে বাংলা একাডেমির পঞ্জিকা মিলিয়ে নিন।"}},
+{"@type":"Question","name":"বঙ্গাব্দ কীভাবে বের হয়?","acceptedAnswer":{"@type":"Answer","text":"বৈশাখ থেকে পৌষের মধ্যে হলে ইংরেজি সাল − ৫৯৩, মাঘ থেকে চৈত্রে হলে − ৫৯৪।"}},
+{"@type":"Question","name":"বাংলা মাসের দিনসংখ্যা কত?","acceptedAnswer":{"@type":"Answer","text":"বৈশাখ–ভাদ্র ৩১ দিন, আশ্বিন–চৈত্র ৩০ দিন (সরকারি সংস্কার অনুযায়ী)।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"ব্যক্তিগত খরচ কীভাবে ধরা হয়?","acceptedAnswer":{"@type":"Answer","text":"মোট থেকে সব ব্যক্তিগত খরচ বাদ দিয়ে বাকিটা সমান ভাগ হয়, তারপর প্রত্যেকের নিজের অতিরিক্তটা যোগ হয়।"}},
+{"@type":"Question","name":"কেউ মাঝমাসে মেসে এলে কী হবে?","acceptedAnswer":{"@type":"Answer","text":"তার থাকার দিন অনুপাতে মোট খরচের অংশ বের করে মোট খরচের ঘরে বসিয়ে হিসাব করুন।"}},
+{"@type":"Question","name":"সদস্য যোগ বা বাদ করা যায়?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ — সদস্য যোগ করুন বোতামে বাড়ান, × চাপলে বাদ যাবে।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"প্রতি কেজি দর কত ধরা উচিত?","acceptedAnswer":{"@type":"Answer","text":"ঈদের ১-২ সপ্তাহ আগে হাট ঘুরে বা পরিচিত ব্যাপারীর কাছ থেকে চলতি দর জেনে নিন — এলাকাভেদে ভিন্ন হয়।"}},
+{"@type":"Question","name":"দামের ±১০% রেঞ্জ কেন?","acceptedAnswer":{"@type":"Answer","text":"জাত, স্বাস্থ্য, বয়স ও চাহিদার উপর দাম ওঠানামা করে — রেঞ্জটা বাস্তবসম্মত ধারণা দেয়।"}},
+{"@type":"Question","name":"পশুর ওজন কীভাবে মাপব?","acceptedAnswer":{"@type":"Answer","text":"বুকের বেড় ও দৈর্ঘ্যের ফিতার মাপ থেকে ওজনের ফর্মুলা আছে, অথবা অভিজ্ঞ ব্যাপারীর অনুমান নিন।"}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"আয়করের করমুক্ত সীমা কত?","acceptedAnswer":{"@type":"Answer","text":"সাধারণ ব্যক্তির ৳৩,৭৫,০০০; নারী ও প্রবীণদের ৳৪,২৫,০০০। এর নিচে আয় হলে কর শূন্য।"}},
+{"@type":"Question","name":"বিনিয়োগ রিবেট কী?","acceptedAnswer":{"@type":"Answer","text":"অনুমোদিত খাতে (সঞ্চয়পত্র, DPS ইত্যাদি) বিনিয়োগে কর রিবেট মেলে — ফলে প্রকৃত কর কমতে পারে।"}},
+{"@type":"Question","name":"আয়কর রিটার্ন কখন জমা দিতে হয়?","acceptedAnswer":{"@type":"Answer","text":"সাধারণত ৩০ নভেম্বরের মধ্যে (ব্যক্তি করদাতা) — NBR-এর ঘোষণা অনুযায়ী তারিখ বদলাতে পারে।"}}]}
+</script>
+
+<!-- ============================================================
+     CONTACT EMAIL: নিচে আপনার ইমেইল ঠিকানা বসান —
+     যোগাযোগ ফর্মের বার্তা এই ঠিকানায় যাবে (mailto পদ্ধতিতে)।
+     Replace you@example.com with your own email address.
+     ============================================================ -->
+<script>window.CONTACT_EMAIL = "hasan464078@gmail.com";</script>
+<script src="blog.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
